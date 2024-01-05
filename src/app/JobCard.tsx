@@ -15,8 +15,8 @@ interface JobCardProps {
       country: string;
     };
   };
-  onSwipeLeft: () => void;
-  onSwipeRight: () => void;
+  onSwipeLeft: (job: any) => void;
+  onSwipeRight: (job: any) => void;
 }
 
 const Card: React.FC<JobCardProps> = ({ job, onSwipeLeft, onSwipeRight }) => {
@@ -27,9 +27,9 @@ const Card: React.FC<JobCardProps> = ({ job, onSwipeLeft, onSwipeRight }) => {
 
     // You might want to add additional logic here based on the swipe direction
     if (direction === 'left') {
-      onSwipeLeft();
+      onSwipeLeft(job);
     } else if (direction === 'right') {
-      onSwipeRight();
+      onSwipeRight(job);
     }
   };
 
@@ -46,8 +46,8 @@ const Card: React.FC<JobCardProps> = ({ job, onSwipeLeft, onSwipeRight }) => {
         <p>Requirements: {job.requirements}</p>
       </div>
       <div className="actions">
-          <button onClick={() => handleSwipe('left')}>Swipe Left</button>
-          <button onClick={() => handleSwipe('right')}>Swipe Right</button>
+          <button className='left' onClick={() => handleSwipe('left')}>Swipe Left</button>
+          <button className='right' onClick={() => handleSwipe('right')}>Swipe Right</button>
         </div>
     </div>
   );
