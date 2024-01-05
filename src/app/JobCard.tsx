@@ -40,10 +40,22 @@ const Card: React.FC<JobCardProps> = ({ job, onSwipeLeft, onSwipeRight }) => {
         onAnimationEnd={() => setSwipeDirection(null)}
       >
         <img src={job.image} alt={`${job.company} Logo`} className="company-logo" />
-        <h3>{job.jobTitle}</h3>
-        <p>{job.company}</p>
-        <p>Location: {job.location.city}, {job.location.country}</p>
-        <p>Requirements: {job.requirements}</p>
+        <div className="property">
+          <span className="property-name">Job Title:</span>
+          <span className="property-value">{job.jobTitle}</span>
+        </div>
+        <div className="property">
+          <span className="property-name">Company:</span>
+          <span className="property-value">{job.company}</span>
+        </div>
+        <div className="property">
+          <span className="property-name">Location:</span>
+          <span className="property-value">{job.location.city}, {job.location.country}</span>
+        </div>
+        <div className="property">
+          <span className="property-name">Requirements:</span>
+          <span className="property-value">{job.requirements}</span>
+        </div>
       </div>
       <div className="actions">
           <button className='left' onClick={() => handleSwipe('left')}>Swipe Left</button>
