@@ -2,34 +2,12 @@
 'use client'
 
 import React, { useState } from 'react';
-import Card from '../Card'; // Create a Card component for each user profile
+import Card from '../JobCard'; // Create a Card component for each user profile
 import './page.css'; // Import the CSS file
-
-interface Profile {
-  id: number;
-  name: string;
-  bio: string;
-  image: string;
-}
-
-const sampleProfiles: Profile[] = [
-  {
-    id: 1,
-    name: 'John Doe',
-    bio: 'I love hiking and photography.',
-    image: '/images/profile1.jpg',
-  },
-  {
-    id: 2,
-    name: 'Jane Smith',
-    bio: 'Passionate about coding and coffee.',
-    image: '/images/profile2.jpg',
-  },
-  // Add more profiles as needed
-];
+import jobs from './../../../data/offers.json';
 
 const TinderPage = () => {
-  const [profiles, setProfiles] = useState<Profile[]>(sampleProfiles);
+  const [profiles, setProfiles] = useState(jobs);
   const [currentProfileIndex, setCurrentProfileIndex] = useState(0);
 
   const handleSwipeLeft = () => {
@@ -43,7 +21,7 @@ const TinderPage = () => {
 
   const handleSwipeRight = () => {
     // Handle swiping right, update state accordingly
-    let newIndex = (currentProfileIndex + 1) % sampleProfiles.length;
+    let newIndex = (currentProfileIndex + 1) % profiles.length;
     setCurrentProfileIndex(newIndex);
   };
 
@@ -52,7 +30,7 @@ const TinderPage = () => {
       {profiles.length > 0 && currentProfileIndex < profiles.length && (
         <Card
           key={profiles[currentProfileIndex].id}
-          profile={profiles[currentProfileIndex]}
+          job={profiles[currentProfileIndex]}
           onSwipeLeft={handleSwipeLeft}
           onSwipeRight={handleSwipeRight}
         />
