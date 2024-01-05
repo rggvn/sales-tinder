@@ -1,6 +1,7 @@
 [
   {
     "id": "5bdbad04-5929-498c-9f12-15870440b106",
+    "image": "/images/company-default.png",
     "company": "ASML",
     "jobTitle": "UX/UI Designer",
     "requirements": "Knowledge of database systems and SQL (e.g., MySQL, MongoDB)",
@@ -11,6 +12,7 @@
   },
   {
     "id": "24a8c86d-ac51-4e84-9c20-56cb06dce8d3",
+    "image": "/images/company-default.png",
     "company": "ING Group",
     "jobTitle": "Data Scientist",
     "requirements": "Proficient in JavaScript and one or more modern frameworks (e.g., React, Angular, Vue)",
@@ -21,6 +23,7 @@
   },
   {
     "id": "71359ca9-369e-4225-a712-1276be6d2656",
+    "image": "/images/company-default-2.png",
     "company": "Royal Dutch Shell",
     "jobTitle": "Web Developer",
     "requirements": "Knowledge of database systems and SQL (e.g., MySQL, MongoDB)",
