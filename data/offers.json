@@ -1,0 +1,102 @@
+[
+  {
+    "id": "5bdbad04-5929-498c-9f12-15870440b106",
+    "company": "ASML",
+    "jobTitle": "UX/UI Designer",
+    "requirements": "Knowledge of database systems and SQL (e.g., MySQL, MongoDB)",
+    "location": {
+      "city": "The Hague",
+      "country": "Netherlands"
+    }
+  },
+  {
+    "id": "24a8c86d-ac51-4e84-9c20-56cb06dce8d3",
+    "company": "ING Group",
+    "jobTitle": "Data Scientist",
+    "requirements": "Proficient in JavaScript and one or more modern frameworks (e.g., React, Angular, Vue)",
+    "location": {
+      "city": "Amsterdam",
+      "country": "Netherlands"
+    }
+  },
+  {
+    "id": "71359ca9-369e-4225-a712-1276be6d2656",
+    "company": "Royal Dutch Shell",
+    "jobTitle": "Web Developer",
+    "requirements": "Knowledge of database systems and SQL (e.g., MySQL, MongoDB)",
+    "location": {
+      "city": "Eindhoven",
+      "country": "Netherlands"
+    }
+  },
+  {
+    "id": "2e93e169-64f2-41c1-9750-baf4bc429f71",
+    "company": "Unilever",
+    "jobTitle": "Web Developer",
+    "requirements": "Knowledge of database systems and SQL (e.g., MySQL, MongoDB)",
+    "location": {
+      "city": "Eindhoven",
+      "country": "Netherlands"
+    }
+  },
+  {
+    "id": "272f7500-bebe-47dc-813d-3a54f5de39bf",
+    "company": "Philips",
+    "jobTitle": "UX/UI Designer",
+    "requirements": "Experience with version control systems (e.g., Git)",
+    "location": {
+      "city": "Rotterdam",
+      "country": "Netherlands"
+    }
+  },
+  {
+    "id": "0522de76-3b9e-4956-9ccd-170e64ab3a7a",
+    "company": "ASML",
+    "jobTitle": "Data Scientist",
+    "requirements": "Proficient in JavaScript and one or more modern frameworks (e.g., React, Angular, Vue)",
+    "location": {
+      "city": "Utrecht",
+      "country": "Netherlands"
+    }
+  },
+  {
+    "id": "97a3bedb-5816-44f3-8a32-a9be7bc6f50b",
+    "company": "ING Group",
+    "jobTitle": "UX/UI Designer",
+    "requirements": "Experience with backend development using Node.js or other server-side technologies",
+    "location": {
+      "city": "The Hague",
+      "country": "Netherlands"
+    }
+  },
+  {
+    "id": "b98b8793-3822-465c-bdde-f1d451321b5d",
+    "company": "Philips",
+    "jobTitle": "DevOps Engineer",
+    "requirements": "Strong understanding of HTML, CSS, and responsive design principles",
+    "location": {
+      "city": "Amsterdam",
+      "country": "Netherlands"
+    }
+  },
+  {
+    "id": "5b3904c0-02b4-4c95-b5b9-983b1d40a9f9",
+    "company": "ASML",
+    "jobTitle": "Web Developer",
+    "requirements": "Strong understanding of HTML, CSS, and responsive design principles",
+    "location": {
+      "city": "Amsterdam",
+      "country": "Netherlands"
+    }
+  },
+  {
+    "id": "4f7e785c-d10a-4a93-90fe-b4d3bec7b303",
+    "company": "ASML",
+    "jobTitle": "DevOps Engineer",
+    "requirements": "Experience with version control systems (e.g., Git)",
+    "location": {
+      "city": "Eindhoven",
+      "country": "Netherlands"
+    }
+  }
+]
