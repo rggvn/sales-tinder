@@ -1,11 +1,11 @@
 import { DATA_DIR } from '@/constants';
-import readOffers from '@/utils/readOffers';
+import readFile from '@/utils/readFile';
 import { promises as fs } from 'fs';
 import { v4 as uuidv4 } from 'uuid';
 
 export async function GET(request: Request) {
   try {
-    const file = await readOffers();
+    const file = await readFile(`${DATA_DIR}/offers.json`);
     return Response.json(file);
   }
   catch (err) {
