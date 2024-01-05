@@ -6,15 +6,15 @@ const FormRow = ({ children }: { children: React.ReactNode }) => {
   return <div className="mb-2 flex flex-col gap-1">{children}</div>;
 };
 
-const CheckBox = ({
-  name,
-  selected = false,
-}: {
-  name: string;
-  selected: boolean;
-}) => {
+const CheckBox = ({ name, selected }: { name: string; selected: boolean }) => {
+  console.log(selected);
   const strippedName = name.replace(/\s/g, "");
   const [checked, setChecked] = useState(selected);
+
+  useEffect(() => {
+    selected && setChecked(true);
+  }, [selected]);
+
   return (
     <div>
       <input
@@ -38,9 +38,12 @@ const CheckBox = ({
   );
 };
 
-const Range = ({ value = "0" }: { value: string }) => {
-  console.log(value);
-  const [distance, setDistance] = useState(parseInt(value));
+const Range = ({ value }: { value: string }) => {
+  const [distance, setDistance] = useState(0);
+
+  useEffect(() => {
+    setDistance(value ? parseInt(value) : 0);
+  }, [value]);
 
   return (
     <div className="">
@@ -50,7 +53,7 @@ const Range = ({ value = "0" }: { value: string }) => {
           id="range-input"
           type="range"
           value={distance}
-          onChange={(e) => setDistance(parseInt(e.target.value))}
+          onChange={(e) => setDistance(e.target.valueAsNumber)}
           min="5"
           max="100"
           className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
@@ -62,7 +65,7 @@ const Range = ({ value = "0" }: { value: string }) => {
           value={distance}
           name="distance"
           required
-          onChange={(e) => setDistance(parseInt(e.target.value))}
+          onChange={(e) => setDistance(e.target.valueAsNumber)}
         />
       </div>
     </div>
@@ -85,9 +88,8 @@ const Skills = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    var object = {};
+    const object = {} as { [key: string]: string | string[] };
     formData.forEach((value, key) => {
-      // Reflect.has in favor of: object.hasOwnProperty(key)
       if (!Reflect.has(object, key)) {
         object[key] = value;
         return;
